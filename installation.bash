@@ -58,12 +58,13 @@ sudo apt install git
 echo "Installation: Git complete"
 
 echo "Installation: Pip start"
-sudo apt install python3-pip
-sudo apt install python3-venv
+sudo apt install python3-pip -y
+sudo apt install python3-venv -y
 echo "Installation: Pip complete"
 
 echo "Installation: nodejs start"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
+nvm list-remote
 nvm install v16.17.1
 echo "Installation: nodejs complete"
